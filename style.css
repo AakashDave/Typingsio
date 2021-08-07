@@ -16,13 +16,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 body{
     background:url('75291.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size:cover;
-    min-height: 100vh;
+    min-height: 800px;
 }
 body, .quote-input{
     font-family: 'Baloo Chettan 2', 'cursive','serif';
@@ -38,9 +39,8 @@ body, .quote-input{
 }
 
 .timer{
-    position:absolute;
-    bottom:4rem;
-    font-size: 3rem;
+    margin: 20px;
+    font-size: 35px;
     color: #db9a6e;
     text-shadow: 2px 2px 5px #1c0038;
     /* background: #1c0038; */
