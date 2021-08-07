@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background: #1c0038;
+    height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    color: #db9a6e;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background:url('75291.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-height: 100vh;
+}
+body, .quote-input{
+    font-family: 'Baloo Chettan 2', 'cursive','serif';
+}
+
+.container{
+    margin-top: 180px;
+    background-color: #db9a6e;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 700px;
+    max-width: 90%;
+}
+
+.timer{
+    position:absolute;
+    bottom:4rem;
+    font-size: 3rem;
+    color: #db9a6e;
+    text-shadow: 2px 2px 5px #1c0038;
+    /* background: #1c0038; */
+    font-weight: bold;
+}
+
+.quote-display{
+    margin-bottom: 1rem;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quote-input{
+    background-color: transparent;
+    border: 2px solid #1c0038;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    height: 11rem;
+    margin: auto;
+    resize: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.quote-input:focus{
+    border: 2px solid black;
+}
+textarea::placeholder{
+color: rgba(0, 0, 0, 0.514);
+}
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+    text-decoration: underline;
+}
