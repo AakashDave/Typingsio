@@ -7,22 +7,114 @@
     <meta name="keywords" content="typing tester,quote tester,typing master">
     <meta name="author" content="Aakash Dave">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Typingsio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c096fa5e26.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Typingsio</h1>
-    </nav>
+    <nav class="navbar navbar-expand-lg fixed-top"">
+        <div class="container-fluid">
+          <div class="box">
+          <a class="navbar-brand" href="#">Typingsio</a>
+          <p>improve your typing skill</p>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">   
+              <i class="fa fa-navicon" style="color:#db9a6e; font-size:28px;"></i>
+          </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Quotepad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#use-head">How to use</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#review">Review</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <main class="main">
     
     <div class="container">
+        <div class="head">
+        <i class="fas fa-quote-right"></i>
+        <h3>quotes:</h3>
+        </div>
         <div class="quote-display" id="quote-display"></div>
         <textarea name="quote-write" id="quote-input" class="quote-input" placeholder="write here..." autofocus></textarea>
         
     </div>
     <div class="timer" id="timer"></div>
 </main>
+
+<section class="use" id="use-head">
+    <div class="use-head" >
+        <h2>HOW TO USE THIS</h2>
+    </div>
+    <div class="answer">
+        <p>You have to write given quote in that textarea as soon as possible,& you have to note down your time in paper & all.<br>if you complete this quote,new quote will be automatically generate & again you have to write & speed up your writing skill,<br> Also you can use these quote on social media platform.show your love with this website.
+        </p>
+      </div>
+</section>
+<section class="review">
+  <div class="use-head" id="review">
+    <h2>REVIEW</h2>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h2>i have seen this website, nice working & smooth experience to use,
+        really greate job.
+      </h2>
+      <img src="1.jpg" class="review-image">
+      <h5>katy brisson</h5>
+    </div>
+    <div class="carousel-item">
+      <h2>There are really great quotes generate,i improved my typing skill a lot.
+        Thank you.
+      </h2>
+      <img src="2.jpg" class="review-image">
+      <h5>olivia Taylor</h5>
+    </div>
+    <div class="carousel-item">
+      <h2>Yeah Better experience. my writing skill & thoughts improved after writing it.
+      </h2>
+      <img src="3.jpg" class="review-image">
+      <h5>Noah Dave</h5>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+
+<footer>
+  <div class="icons">
+    <a href="https://www.instagram.com/__aakash_dave__/" target="_blank" class="fa fa-instagram" rel="noopener"></a>
+    <a href="https://www.facebook.com/aakash.dave.5667/" target="_blank" class="fa fa-facebook" rel="noopener"></a>
+  </div>
+  <div class="foot">
+    &copy; copyright 2021,All right reserved.
+  </div>
+</footer>
 </body>
 </html>
