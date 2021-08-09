@@ -84,6 +84,9 @@ body, .quote-input{
     margin: 10px;
     font-size: 20px;
     font-weight: bold;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 .quote-input{

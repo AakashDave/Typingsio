@@ -25,7 +25,11 @@ quoteInputElement.addEventListener('input',()=>{
 
         }
     })
-    if (correct) renderNewQuote()
+    if (correct) {
+        renderNewQuote()
+        alert("You have completed in "+getTimerTime()+"second, press ok to next quote.");
+    }
+
 })
 function getRandomQuote() {
     return fetch(RANDOM_QUOTE_API_URL)
@@ -42,10 +46,10 @@ async function renderNewQuote() {
          quoteDisplayElement.appendChild(characterSpan);
      });
      quoteInputElement.value=null;
-     startTimer()
+      startTimer()
 }
+renderNewQuote()
 
-renderNewQuote();
 let startTime;
 function startTimer() {
     timerElement.innerText=0;
