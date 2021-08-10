@@ -2,8 +2,9 @@ const RANDOM_QUOTE_API_URL='https://api.quotable.io/random';
 const quoteDisplayElement=document.getElementById('quote-display');
 const quoteInputElement=document.getElementById('quote-input');
 const timerElement=document.getElementById('timer');
-
-
+const popup=document.getElementById('popup');
+const Playbtn=document.getElementById('play');
+let myvar;
 quoteInputElement.addEventListener('input',()=>{
     const arrayQuote=quoteDisplayElement.querySelectorAll('span');
     const arrayvalue=quoteInputElement.value.split('');
@@ -26,8 +27,15 @@ quoteInputElement.addEventListener('input',()=>{
         }
     })
     if (correct) {
-        renderNewQuote()
-        alert("You have completed in "+getTimerTime()+"second, press ok to next quote.");
+        Playbtn.innerHTML="Replay";
+        popup.innerText="you have completed in "+getTimerTime()+" second";
+        timerElement.style.display="none";
+         Playbtn.addEventListener('click',()=>{
+            if(renderNewQuote()){
+                popup.innerText='';
+                timerElement.style.display="block";
+            }
+         })
     }
 
 })
@@ -38,7 +46,9 @@ function getRandomQuote() {
 }
 
 async function renderNewQuote() {
-     const quote= await getRandomQuote();
+    
+      const quote= await getRandomQuote();
+     
      quoteDisplayElement.innerText='';
      quote.split('').forEach(character => {
          const characterSpan= document.createElement('span');
@@ -46,18 +56,25 @@ async function renderNewQuote() {
          quoteDisplayElement.appendChild(characterSpan);
      });
      quoteInputElement.value=null;
-      startTimer()
+     
+    
 }
-renderNewQuote()
+Playbtn.addEventListener('click',()=>{
+    renderNewQuote()
+    startTimer()
+ })
 
 let startTime;
+
 function startTimer() {
     timerElement.innerText=0;
     startTime=new Date()
-    setInterval(() => {
+     myvar= setInterval(() => {
        timer.innerText = getTimerTime()
     }, 1000);
 }
 function getTimerTime() {
    return Math.floor((new Date() - startTime)/1000)
 }
+
+    

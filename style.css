@@ -84,9 +84,9 @@ body, .quote-input{
     margin: 10px;
     font-size: 20px;
     font-weight: bold;
-    user-select: none;
+    /* user-select: none;
     -ms-user-select: none;
-    -webkit-user-select: none;
+    -webkit-user-select: none; */
 }
 
 .quote-input{
@@ -118,7 +118,27 @@ color: rgba(0, 0, 0, 0.514);
     color: red;
     text-decoration: underline;
 }
-
+#popup{
+    color: #1c0038;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.play{
+    text-align: center;
+}
+.play button{
+    background: #1c0038;
+    color: #db9a6e;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid black;
+}
+.play button:hover{
+    background: #db9a6e;;
+    color: #1c0038;
+}
 .use{
     display: flex;
     flex-direction: column;
