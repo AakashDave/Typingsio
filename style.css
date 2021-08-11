@@ -118,27 +118,29 @@ color: rgba(0, 0, 0, 0.514);
     color: red;
     text-decoration: underline;
 }
-#popup{
+#popup,.message{
     color: #1c0038;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     
 }
-.play{
+.play,#replay-box{
     text-align: center;
 }
-.play button{
+.play button,#replay-box button{
     background: #1c0038;
     color: #db9a6e;
     padding: 5px 10px;
     outline: none;
     border: 2px solid black;
+    transition: all 0.5s;
 }
-.play button:hover{
+.play button:hover,#replay-box button:hover{
     background: #db9a6e;;
     color: #1c0038;
 }
+
 .use{
     display: flex;
     flex-direction: column;
