@@ -61,6 +61,13 @@ async function renderNewQuote() {
  
 }
 quoteInputElement.readOnly = true;
+quoteInputElement.addEventListener('click',()=>{
+  if (quoteInputElement.readOnly == true) {
+    alert("please start the game!!")
+  }
+})
+
+
 Playbtn.addEventListener('click',()=>{
     quoteInputElement.readOnly = false;
     startTimer();

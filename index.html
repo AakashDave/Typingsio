@@ -13,6 +13,11 @@
     <script src="https://kit.fontawesome.com/c096fa5e26.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top"">
@@ -52,11 +57,11 @@
         <textarea name="quote-write" id="quote-input" class="quote-input" placeholder="write here..." autofocus></textarea>
         <div id="popup"></div>
         <div class="play">
-          <button id="play">Play</button>
+          <button id="play" class="animate__animated animate__headShake animate__slow animate__infinite	infinite">Play</button>
         </div>
         <div id="replay-box">
-          <p class="message">click here to replay</p>
-          <button id="replay-btn">Replay</button>
+          <p class="message animate__animated animate__headShake animate__slow animate__infinite	infinite">click here to replay</p>
+          <button id="replay-btn"  class="animate__animated animate__headShake animate__slow animate__infinite	infinite" >Replay</button>
         </div>
     </div>
     <div class="timer" id="timer"></div>
