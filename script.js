@@ -3,9 +3,13 @@ const quoteDisplayElement = document.getElementById("quote-display");
 const quoteInputElement = document.getElementById("quote-input");
 const timerElement = document.getElementById("timer");
 const popup = document.getElementById("popup");
+const toastMsg = document.getElementById("toast-msg");
 const Playbtn = document.getElementById("play");
 const Replaybox = document.getElementById("replay-box");
 const Replaybtn = document.getElementById("replay-btn");
+const scoreBoard= document.getElementById("score");
+const wordBoard= document.getElementById("word");
+let score = 0;
 Replaybox.style.display="none";
 quoteInputElement.addEventListener("input", () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll("span");
@@ -13,6 +17,7 @@ quoteInputElement.addEventListener("input", () => {
   Replaybox.style.display="none";
   let correct = true;
   arrayQuote.forEach((characterSpan, index) => {
+
     const character = arrayvalue[index];
     if (character == null) {
       characterSpan.classList.remove("correct");
@@ -28,8 +33,10 @@ quoteInputElement.addEventListener("input", () => {
     }
   });
   if (correct) {
+    score++;
+    scoreBoard.innerText=score;
     Replaybox.style.display="block";
-    popup.innerText = "you have completed in " + getTimerTime() + " second";
+    popup.innerText = "You have completed in "+ getTimerTime() + " second!";
     timerElement.style.display = "none";
     quoteInputElement.readOnly = true;
     renderNewQuote();
@@ -39,6 +46,7 @@ quoteInputElement.addEventListener("input", () => {
       popup.innerText = "";
       timerElement.style.display = "block";
       Replaybox.style.display="none";
+      toastMsg.style.display='none';
     });
   }
 });
@@ -52,6 +60,8 @@ async function renderNewQuote() {
   const quote = await getRandomQuote();
   quoteDisplayElement.innerText = "";
   quote.split("").forEach((character) => {
+    let quoteLength=quote.length;
+    wordBoard.innerText=quoteLength;
     const characterSpan = document.createElement("span");
     characterSpan.innerText = character;
     quoteDisplayElement.appendChild(characterSpan);
@@ -63,16 +73,18 @@ async function renderNewQuote() {
 quoteInputElement.readOnly = true;
 quoteInputElement.addEventListener('click',()=>{
   if (quoteInputElement.readOnly == true) {
-    alert("please start the game!!")
+    // alert("please start the game!!")
+    toastMsg.style.display='block';
+    toastMsg.innerHTML="please click to Play button!!";
   }
 })
-
 
 Playbtn.addEventListener('click',()=>{
     quoteInputElement.readOnly = false;
     startTimer();
     renderNewQuote();
     Playbtn.style.display="none";
+    toastMsg.style.display='none';
 })
 let startTime;
 let myvar;

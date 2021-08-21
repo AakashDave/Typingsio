@@ -46,26 +46,37 @@
           </div>
         </div>
       </nav>
-    <main class="main">
+      <main class="main">
     
-    <div class="container">
-        <div class="head">
-        <i class="fas fa-quote-right"></i>
-        <h3>quotes:</h3>
+        <div class="container">
+          <div id="toast-msg" class="animate__animated animate__shakeX animate__slow animate__repeat-1	1">
+          </div>
+            <div class="head">
+            <i class="fas fa-quote-right"></i>
+            <h3>quotes:</h3>
+            </div>
+            
+            <div class="quote-display" id="quote-display"></div>
+            <div class="score">
+              word: <p id="word">0</p>
+            </div>
+            <textarea name="quote-write" id="quote-input" class="quote-input" placeholder="write here..." autofocus></textarea>
+            
+            <div id="popup"></div>
+            
+            <div class="play">
+              <button id="play" class="animate__animated animate__headShake animate__slow animate__infinite	infinite">Play</button>
+            </div>
+            <div id="replay-box">
+              <p class="message animate__animated animate__headShake animate__slow animate__infinite	infinite">click here to replay</p>
+              <button id="replay-btn"  class="animate__animated animate__headShake animate__slow animate__infinite	infinite" >Replay</button>
+            </div>
+            <div class="score">
+              Score: <p id="score">0</p>
+            </div>
         </div>
-        <div class="quote-display" id="quote-display"></div>
-        <textarea name="quote-write" id="quote-input" class="quote-input" placeholder="write here..." autofocus></textarea>
-        <div id="popup"></div>
-        <div class="play">
-          <button id="play" class="animate__animated animate__headShake animate__slow animate__infinite	infinite">Play</button>
-        </div>
-        <div id="replay-box">
-          <p class="message animate__animated animate__headShake animate__slow animate__infinite	infinite">click here to replay</p>
-          <button id="replay-btn"  class="animate__animated animate__headShake animate__slow animate__infinite	infinite" >Replay</button>
-        </div>
-    </div>
-    <div class="timer" id="timer"></div>
-</main>
+        <div class="timer" id="timer"></div>
+    </main>
 
 <section class="use" id="use-head">
     <div class="use-head" >
