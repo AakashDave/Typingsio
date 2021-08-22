@@ -14,14 +14,7 @@
     font-size: 28px;
     font-family: 'Russo One', sans-serif;
 }
-.software-btn{
-    margin-left: 60px;
-}
-.software-btn a{
-  color: white;
-  text-decoration: none;
-  margin-left: 8px;
-}
+
 .navbar p{
     color: #db9a6e;
     font-size: 12px;
@@ -73,9 +66,11 @@ body, .quote-input{
 }
 .head{
     display: flex;
+    color: #1c0038;
 }
 .head h3{
     margin-left: 10px;
+    color: #1c0038;
 }
 .timer{
     margin: 20px;
@@ -160,7 +155,26 @@ color: rgba(0, 0, 0, 0.514);
 .play button:hover,#replay-box button:hover{
     color: white;
 }
-
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+   flex-direction: column;
+   font-weight: bold;
+}
+.download a{
+    padding: 5px 8px;
+    color: #1c0038;
+    font-size: 18px;
+    border: 2px solid #1c0038;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.download a:hover{
+    color: white;
+    background-color: #1c0038;
+}
 .use{
     display: flex;
     flex-direction: column;
