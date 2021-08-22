@@ -14,7 +14,14 @@
     font-size: 28px;
     font-family: 'Russo One', sans-serif;
 }
-
+.software-btn{
+    margin-left: 60px;
+}
+.software-btn a{
+  color: white;
+  text-decoration: none;
+  margin-left: 8px;
+}
 .navbar p{
     color: #db9a6e;
     font-size: 12px;
